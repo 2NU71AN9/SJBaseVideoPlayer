@@ -1,6 +1,6 @@
 {
   "name": "SJBaseVideoPlayer",
-  "version": "3.7.3.3",
+  "version": "3.7.3.4",
   "summary": "video player.",
   "description": "https://github.com/changsanjiang/SJBaseVideoPlayer/blob/master/README.md",
   "homepage": "https://github.com/changsanjiang/SJBaseVideoPlayer",
@@ -16,7 +16,7 @@
   },
   "source": {
     "git": "https://github.com/changsanjiang/SJBaseVideoPlayer.git",
-    "tag": "v3.7.3.3"
+    "tag": "v3.7.3.4"
   },
   "frameworks": [
     "UIKit",
@@ -26,7 +26,8 @@
   "source_files": "SJBaseVideoPlayer/*.{h,m}",
   "default_subspecs": [
     "Common",
-    "AVPlayer"
+    "AVPlayer",
+    "AliPlayer"
   ],
   "dependencies": {
     "Masonry": [

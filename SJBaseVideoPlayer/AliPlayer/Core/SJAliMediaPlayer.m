@@ -128,6 +128,15 @@ NSErrorDomain const SJAliMediaPlayerErrorDomain = @"SJAliMediaPlayerErrorDomain"
         _assetStatus = SJAssetStatusPreparing;
         _delegateProxy = [SJAliMediaPlayerDelegateProxy weakProxyWithTarget:self];
         _player = AliPlayer.alloc.init;
+        [_player setMaxAccurateSeekDelta:1000];
+        AVPConfig *config = [_player getConfig];
+        #if DEBUG
+        config.referer = @"http://tappgw.yuedushufang.com";
+        #else
+        config.referer = @"http://appgw.yuedushufang.com";
+        #endif
+        [_player setConfig:config];
+        
         _player.delegate = (id)_delegateProxy;
         _player.playerView = UIView.new;
         _pauseWhenAppDidEnterBackground = YES;

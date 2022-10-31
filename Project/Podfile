@@ -9,5 +9,5 @@ target 'Project' do
 
   # Pods for Project
   
-  pod 'SJBaseVideoPlayer', :path => '../../SJBaseVideoPlayer'  
+  pod 'SJBaseVideoPlayer', :path => '../../SJBaseVideoPlayer'
 end
